@@ -83,6 +83,13 @@ npm run dev
 
 ---
 
-## 📚 Projects
+## 🗃️ Projects
 
-Projects will be added progressively as I build and refine them.
+### 01 - Date Counter
+
+- Controlled inputs and validation logic
+- Predictable state transitions
+- Derived state (dynamic date calculation)
+- Accessible UI with live region announcements
+
+👉 [View project](./01-date-counter/)
