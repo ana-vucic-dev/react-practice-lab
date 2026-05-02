@@ -1,0 +1,322 @@
+:root {
+  --primary-color: #130f23;
+  --primary-color-hover: #231c3d;
+  --secondary-color: #3a374a;
+  --accent-color: #f8d92d;
+  --bg-color: #23212e;
+  --text-color: #d1cde1;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Saira Stencil One', sans-serif;
+  font-weight: 500;
+  text-align: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.app {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.date-counter-header {
+  padding: 2rem 0;
+}
+
+#date-counter-title {
+  font-size: 3.5rem;
+  color: var(--accent-color);
+}
+
+.date-counter {
+  width: 90%;
+  min-width: 200px;
+  max-width: 700px;
+  margin: 4rem auto 6rem;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.counter-settings {
+  width: 100%;
+  min-width: 100px;
+  min-height: 200px;
+  padding: 2rem 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.counter {
+  width: 100%;
+  min-width: 180px;
+  max-width: 350px;
+  height: 50%;
+  border: none;
+  padding: 1rem 0;
+  margin: 1rem auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.counter label {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  margin-bottom: 0.5rem;
+}
+
+.input-container {
+  width: 90%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.input-container span {
+  display: inline-block;
+  min-width: 40px;
+  min-height: 40px;
+  font-size: 2rem;
+  padding: 0.2rem 1.3rem;
+}
+
+.input-container span:first-of-type {
+  padding: 0.2rem 1.96rem;
+}
+
+input {
+  min-width: 0;
+  max-width: 250px;
+  flex-grow: 1;
+}
+
+input[type='range'] {
+  accent-color: var(--accent-color);
+  padding: 0.6rem 0;
+}
+
+input[type='text'] {
+  font-size: 1.8rem;
+  background-color: var(--text-color);
+  color: var(--primary-color);
+  padding: 0.8rem;
+  border-radius: 0.3rem;
+  border: none;
+}
+
+input:focus-visible {
+  outline: 2px solid var(--text-color);
+  outline-offset: 2px;
+}
+
+.counter button {
+  min-width: 40px;
+  min-height: 40px;
+  padding: 0.2rem 1.3rem;
+  flex-shrink: 0;
+}
+
+.reset-btn {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.8rem 2rem;
+  margin: 1rem 0 2rem;
+}
+
+.counter button,
+.reset-btn {
+  font-size: 2rem;
+  font-family: 'Saira Stencil One', sans-serif;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition:
+    transform 0.1s ease,
+    background-color 0.2s;
+}
+
+@media (hover: hover) {
+  button:hover {
+    background-color: var(--primary-color-hover);
+  }
+}
+
+button:active {
+  background-color: var(--primary-color-hover);
+  transform: scale(0.95);
+}
+
+button:focus-visible {
+  background-color: var(--primary-color-hover);
+  outline: 2px solid var(--text-color);
+  outline-offset: 2px;
+}
+
+.date-count {
+  font-size: 2.5rem;
+  padding: 2rem;
+}
+
+.date {
+  display: inline-block;
+  color: var(--accent-color);
+}
+
+footer {
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.time {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  padding: 2rem 0;
+}
+
+footer small {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin: 0 0 2rem;
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--text-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+@media screen and (min-width: 460px) {
+  #date-counter-title {
+    font-size: 4rem;
+  }
+
+  .date-counter {
+    padding: 1rem;
+  }
+
+  .counter {
+    margin: 0;
+  }
+
+  .counter-settings {
+    padding: 0;
+  }
+
+  .counter label,
+  .input-container span,
+  .counter button,
+  .date-count {
+    font-size: 2.5rem;
+  }
+
+  input[type='text'] {
+    padding: 1.1rem;
+  }
+
+  .counter button {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .time {
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .date-counter-header {
+    padding: 1rem 0;
+  }
+
+  #date-counter-title {
+    font-size: 6rem;
+  }
+
+  .date-counter {
+    padding: 2rem;
+  }
+
+  .counter label,
+  .counter button,
+  .date-count,
+  .time {
+    font-size: 3rem;
+  }
+
+  input[type='text'] {
+    padding: 1.3rem;
+  }
+
+  .counter button {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .reset-btn {
+    font-size: 2.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: auto !important;
+  }
+}
