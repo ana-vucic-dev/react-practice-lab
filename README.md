@@ -93,3 +93,12 @@ npm run dev
 - Accessible UI with live region announcements
 
 👉 [View project](./01-date-counter/)
+
+### 02 - Flashcards
+
+- State-driven conditional rendering
+- Toggle interactions with single-selection logic
+- Data-driven UI using mapped components
+- Accessible interactions with `aria-pressed` and keyboard support
+
+👉 [View project](./02-flashcards/)
