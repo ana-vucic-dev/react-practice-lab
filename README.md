@@ -102,3 +102,12 @@ npm run dev
 - Accessible interactions with `aria-pressed` and keyboard support
 
 👉 [View project](./02-flashcards/)
+
+### 03 - FAQ Accordion
+
+- Reusable component design
+- ID-based state management
+- Accessible accordion patterns with ARIA attributes
+- Rich JSX content support
+
+👉 [View project](./03-faq-accordion/)
