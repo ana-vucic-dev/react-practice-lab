@@ -76,6 +76,7 @@ Compared to the initial exercise, this version includes:
 - Live region (`aria-live="polite"`) for dynamic updates
 - Screen-reader-friendly hidden text and labels
 - Keyboard-friendly interaction with visible focus states
+- Respect for user motion preferences (`prefers-reduced-motion`)
 
 ---
 

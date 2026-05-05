@@ -78,6 +78,7 @@ Compared to the initial exercise, this version includes:
 - Buttons for interactive elements (keyboard-accessible by default)
 - Toggle state communicated via `aria-pressed`
 - Visible focus styles for keyboard navigation
+- `prefers-reduced-motion` support for users sensitive to animation
 
 ---
 

@@ -81,6 +81,7 @@ Compared to the initial exercise, this version includes:
 - `aria-expanded`, `aria-controls`, and `aria-labelledby` for proper relationships
 - Keyboard-accessible interactions via buttons
 - Focus-visible styling for improved navigation
+- Respect for `prefers-reduced-motion` user preferences
 
 ---
 
