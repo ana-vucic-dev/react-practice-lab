@@ -111,3 +111,12 @@ npm run dev
 - Rich JSX content support
 
 👉 [View project](./03-faq-accordion/)
+
+### 04 - Stepper
+
+- Multi-step UI with progressive disclosure
+- Component composition and reusable UI elements
+- Accessible toggle behavior with ARIA attributes
+- Real-world content structure (mini blog post)
+
+👉 [View project](./04-stepper/)
