@@ -120,3 +120,12 @@ npm run dev
 - Real-world content structure (mini blog post)
 
 👉 [View project](./04-stepper/)
+
+### 05 - Tip Calculator
+
+- Controlled inputs with validation
+- Derived state (bill + average tip calculation)
+- Dynamic rendering based on user input
+- Accessible form structure
+
+👉 [View project](./05-tip-calculator/)
