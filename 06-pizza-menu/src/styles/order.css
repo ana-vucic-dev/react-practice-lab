@@ -1,0 +1,21 @@
+.order {
+  font-size: var(--font-xs);
+  text-align: center;
+  line-height: var(--paragraph-line-height);
+  padding: 2rem 2rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.order-btn {
+  font-size: var(--font-l);
+  font-weight: 500;
+  padding: 1.4rem 3.2rem;
+}
+
+.order-btn:active {
+  border: 1px solid var(--standard-border-color);
+}

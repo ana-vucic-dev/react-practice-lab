@@ -1,0 +1,58 @@
+.header {
+  height: 15rem;
+  background-color: var(--primary-color);
+  padding: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 5vw, 5.2rem);
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--text-color);
+  position: relative;
+}
+
+h1::before,
+h1::after {
+  display: block;
+  content: '';
+  height: 1px;
+  width: 4rem;
+  background-color: var(--text-color);
+  position: absolute;
+  top: calc(50% - 1px);
+
+  @media (min-width: 403px) {
+    visibility: hidden;
+  }
+
+  @media (min-width: 460px) {
+    visibility: visible;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 2px;
+  }
+}
+
+h1::before {
+  left: 0;
+
+  @media (min-width: 460px) {
+    left: -5rem;
+  }
+}
+
+h1::after {
+  right: 0;
+
+  @media (min-width: 460px) {
+    right: -5rem;
+  }
+}
