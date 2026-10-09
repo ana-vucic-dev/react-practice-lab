@@ -129,3 +129,12 @@ npm run dev
 - Accessible form structure
 
 👉 [View project](./05-tip-calculator/)
+
+### 06 - Pizza Menu
+
+- Component composition and reusable UI elements
+- Data-driven filtering and derived state
+- Conditional rendering for menu availability and business hours
+- Accessible interactions with ARIA attributes and keyboard support
+
+👉 [View project](./06-pizza-menu/)
