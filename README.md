@@ -138,3 +138,12 @@ npm run dev
 - Accessible interactions with ARIA attributes and keyboard support
 
 👉 [View project](./06-pizza-menu/)
+
+### 07 - Far Away Travel List
+
+- State-driven packing-list UI with persistent data
+- Memoized sorting, item management, and derived statistics
+- Reusable confirmation dialog with Context API
+- Accessible, responsive design
+
+👉 [View project](./07-travel-list/)
