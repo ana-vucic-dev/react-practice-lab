@@ -1,0 +1,117 @@
+dialog {
+  width: 95%;
+  max-width: 480px;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  text-align: center;
+
+  border: none;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: auto;
+  box-shadow: 0 0.5rem 1.8rem rgba(0, 0, 0, 0.8);
+
+  opacity: 0;
+  transform: scale(0.9);
+  transition:
+    opacity 0.3s ease-out,
+    transform 0.3s ease-out,
+    display 0.3s allow-discrete,
+    overlay 0.3s allow-discrete;
+
+  display: none;
+
+  @media (min-width: 460px) {
+    padding: 2.5rem 3rem;
+  }
+
+  @media (min-width: 2560px) {
+    max-width: 900px;
+  }
+}
+
+dialog:open {
+  opacity: 1;
+  transform: scale(1);
+  display: block;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+  transition: opacity 0.3s ease;
+}
+
+@starting-style {
+  dialog[open] {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  dialog::backdrop {
+    opacity: 0;
+  }
+}
+
+dialog h1 {
+  font-family: var(--subheading-font-family);
+  font-size: clamp(2.3rem, 5vw, 2.7rem);
+  letter-spacing: 1px;
+  word-spacing: normal;
+  padding: 1rem 0 2rem;
+  border-bottom: 2px solid var(--text-color);
+}
+
+.dialog-content {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  padding: 2rem 0 1rem;
+
+  @media (min-width: 576px) {
+    font-size: 2rem;
+  }
+}
+
+.dialog-content .question {
+  padding-bottom: 1rem;
+}
+
+.dialog-content .warning {
+  font-weight: 700;
+}
+
+.dialog-actions {
+  margin: 1rem 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  @media (min-width: 460px) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.dialog-actions .btn {
+  @media (min-width: 460px) {
+    padding: 1.2rem 3.2rem;
+  }
+}
+
+.dialog-delete-btn {
+  background-color: var(--danger-color);
+  color: var(--secondary-color);
+}
+
+.dialog-delete-btn:active,
+.dialog-delete-btn:focus-visible {
+  background-color: var(--danger-color-hover);
+  outline: 3px solid var(--danger-color-hover);
+}
+
+@media (hover: hover) {
+  .dialog-delete-btn:hover {
+    background-color: var(--danger-color-hover);
+  }
+}

@@ -1,0 +1,119 @@
+.packing-list-container {
+  min-height: 400px;
+  background-color: var(--text-color);
+  color: var(--secondary-color);
+  padding: 4rem 1rem;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.packing-list {
+  list-style: none;
+  width: min(100%, 1100px);
+  padding: 2rem 1rem;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 32rem), 1fr));
+  gap: 1.2rem;
+
+  @media (min-width: 676px) {
+    gap: 1.6rem;
+  }
+
+  @media (min-width: 2560px) {
+    width: min(100%, 2400px);
+  }
+}
+
+.list-item {
+  min-width: 0;
+  display: flex;
+  gap: 1rem;
+
+  padding: 1.2rem 1.4rem;
+  border: 1px solid rgb(255 235 179 / 18%);
+  border-radius: 1.2rem;
+  background-color: rgb(255 235 179 / 6%);
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.list-item label {
+  min-width: 0;
+  line-height: 1.4;
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.list-item:has(input:checked) {
+  opacity: 0.6;
+  transform: scale(0.98);
+}
+
+.list-item input[type='checkbox'] {
+  width: 2rem;
+  height: 2rem;
+  margin-top: 0.3rem;
+  accent-color: var(--accent-color-strong);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.list-item .delete-item-btn {
+  width: 2.8rem;
+  font-size: 2rem;
+  color: var(--secondary-color);
+  background-color: var(--danger-color);
+  padding: 0 0.4rem;
+  align-self: flex-start;
+  flex-shrink: 0;
+}
+
+.list-item .delete-item-btn:active,
+.list-item .delete-item-btn:focus-visible {
+  background-color: var(--danger-color-hover);
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+@media (hover: hover) {
+  .list-item .delete-item-btn:hover {
+    color: var(--secondary-color-hover);
+    background-color: var(--danger-color-hover);
+  }
+}
+
+.list-actions {
+  min-width: 0;
+  max-width: 100%;
+  padding: 2rem 0 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+
+  @media (min-width: 460px) {
+    flex-direction: row;
+  }
+}
+
+.sorting-options,
+.clear-list-btn {
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 0.8rem 2.4rem;
+
+  @media (min-width: 460px) {
+    width: auto;
+  }
+}
