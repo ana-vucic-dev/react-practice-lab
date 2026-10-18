@@ -147,3 +147,12 @@ npm run dev
 - Accessible, responsive design
 
 👉 [View project](./07-travel-list/)
+
+### 08 - PinDrop
+
+- Custom `useGeolocation` hook using the browser Geolocation API
+- Conditional rendering for loading, error, and success states
+- Accessible live-region announcements and responsive UI
+- Coordinate display with direct OpenStreetMap navigation
+
+👉 [View project](./08-pindrop/)
