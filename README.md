@@ -156,3 +156,12 @@ npm run dev
 - Coordinate display with direct OpenStreetMap navigation
 
 👉 [View project](./08-pindrop/)
+
+### 09 - State of Disaster
+
+- Component identity and state preservation across renders
+- Data-driven tabs with reusable content components
+- Interactive like history with undo and cancellable delayed reset
+- Accessible keyboard navigation and responsive UI
+
+👉 [View project](./09-state-of-disaster/)
