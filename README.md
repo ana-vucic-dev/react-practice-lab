@@ -165,3 +165,12 @@ npm run dev
 - Accessible keyboard navigation and responsive UI
 
 👉 [View project](./09-state-of-disaster/)
+
+### 10 - Chromatic
+
+- Interactive color picker with dynamic background updates
+- Real-time HEX, RGB, and HSL conversion
+- Clipboard integration with accessible interaction feedback
+- Responsive UI with comprehensive color utility tests
+
+👉 [View project](./10-chromatic/)
