@@ -174,3 +174,12 @@ npm run dev
 - Responsive UI with comprehensive color utility tests
 
 👉 [View project](./10-chromatic/)
+
+### 11 - Classy Weather
+
+- Class-based React components and lifecycle methods
+- Open-Meteo geocoding and daily weather forecasts
+- Persistent location search using `localStorage`
+- Responsive, keyboard-accessible forecast with horizontal scrolling
+
+👉 [View project](./11-classy-weather/)
