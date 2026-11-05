@@ -1,0 +1,255 @@
+:root {
+  --primary-color: #f0d2ce;
+  --secondary-color: #222;
+  --bg-color: #eabfb9;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  padding: 2rem 1rem 1rem;
+  font-family: 'Cinzel Decorative', serif;
+  color: var(--secondary-color);
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+}
+
+.app {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-wrapper {
+  width: 90%;
+  max-width: 120rem;
+  min-height: 55rem;
+  padding: 2rem 0.4rem;
+  margin: 2rem auto;
+
+  border: 2px solid var(--secondary-color);
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 1.2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 400;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  text-align: center;
+  margin: 2rem 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--secondary-color);
+
+  @media (min-width: 768px) {
+    letter-spacing: 3px;
+  }
+}
+
+.tagline {
+  font-size: clamp(1.6rem, 4vw, 1.8rem);
+  letter-spacing: 0.15rem;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    letter-spacing: 2px;
+  }
+}
+
+.date {
+  font-size: clamp(1.4rem, 4vw, 1.6rem);
+  text-align: center;
+  margin: 3rem 0 2rem;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  max-width: 90%;
+}
+
+fieldset {
+  min-width: 0;
+  border: none;
+}
+
+input[type='search'] {
+  display: inline-block;
+  max-width: 100%;
+  width: 36rem;
+  font-family: inherit;
+  color: inherit;
+  font-size: clamp(1.6rem, 5vw, 2rem);
+  text-align: center;
+  background-color: var(--primary-color);
+  padding: 1.6rem 1rem;
+  margin: 2rem auto;
+  border: none;
+}
+
+input[type='search']:focus-visible {
+  outline: 2px solid var(--secondary-color);
+}
+
+.loader {
+  font-size: clamp(1.4rem, 5vw, 1.6rem);
+  font-weight: 500;
+
+  visibility: hidden;
+}
+
+.loader.is-loading {
+  visibility: visible;
+}
+
+.location-forecast-wrapper {
+  width: 90%;
+  min-height: 26rem;
+  margin-top: 4rem;
+
+  @media (min-width: 768px) {
+    margin-top: 2rem;
+  }
+}
+
+.location-forecast {
+  max-width: 100%;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 2.4rem);
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+.weather {
+  contain: paint;
+  list-style: none;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  white-space: nowrap;
+
+  display: flex;
+  gap: 1.8rem;
+
+  @media (min-width: 1200px) {
+    justify-content: center;
+  }
+}
+
+@supports selector(::-webkit-scrollbar) {
+  .weather::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.day {
+  font-size: clamp(1.8rem, 5vw, 2rem);
+  padding: 1.6rem 2rem;
+  background-color: var(--primary-color);
+
+  flex: 0 0 12.8rem;
+  scroll-snap-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.weather-icon {
+  width: 5rem;
+  height: 5rem;
+  font-size: 4rem;
+}
+
+.mean-temp-label {
+  font-size: clamp(1.2rem, 5vw, 1.4rem);
+}
+
+.mean-temp {
+  font-size: clamp(1.8rem, 5vw, 2rem);
+}
+
+.min-max-temp {
+  font-size: clamp(1.4rem, 5vw, 1.6rem);
+}
+
+footer {
+  font-size: clamp(1.4rem, 3vw, 1.6rem);
+  text-align: center;
+  padding: 2rem 0 4rem;
+  margin-top: auto;
+}
+
+footer small {
+  display: block;
+  font-size: clamp(1.6rem, 3vw, 1.8rem);
+  padding: 2rem 0;
+}
+
+.attribution-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.attribution {
+  padding: 0.4rem 0;
+}
+
+a {
+  color: var(--secondary-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+}
